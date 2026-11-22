@@ -9,8 +9,8 @@ jobs:
 
       - name: Init test DB
         run: |
-        apk add --no-cache sqlite
-        sqlite3 tracker.db < init.sql
+          apk add --no-cache sqlite
+          sqlite3 tracker.db < init.sql
 
       - name: Run Unit Tests
         run: GOOS=linux GOARCH=amd64 go test
